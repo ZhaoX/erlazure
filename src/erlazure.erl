@@ -710,7 +710,8 @@ build_uri_base(Service, Account) ->
         lists:concat(["https://", get_host(Service, Account), "/"]).
 
 get_host(Service, Account) ->
-        lists:concat([Account, ".", erlang:atom_to_list(Service), ".core.windows.net"]).
+        %lists:concat([Account, ".", erlang:atom_to_list(Service), ".core.windows.net"]).
+        lists:concat([Account, ".", erlang:atom_to_list(Service), ".core.chinacloudapi.cn"]).
 
 -spec canonicalize_headers([string()]) -> string().
 canonicalize_headers(Headers) ->

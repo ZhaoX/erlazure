@@ -38,7 +38,10 @@
 %% Blob API
 -export([put_block_blob/4, put_block_blob/5]).
 -export([get_blob/3, get_blob/4]).
+-export([default_config/0]).
 
+default_config() ->
+        #azure_config{account = "", key = ""}.
 
 put_block_blob(Container, Name, Data, Config) ->
         put_block_blob(Container, Name, Data, Config, []).
